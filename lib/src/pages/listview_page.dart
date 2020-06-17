@@ -132,7 +132,15 @@ class _ListaPageState extends State<ListaPage> {
 
     final duration = new Duration(seconds: 2);
 
-    
+    new Timer(
+      duration, 
+      () {
+        _listaNumeros.clear();
+        _ultimoItem++;
+        _agregar10();
+      }
+    );
 
+    return Future.delayed(duration);
   }
 }
